@@ -73,7 +73,7 @@ html, body {
 
 .loadingIcon{
     width: 100px;
-    margin: auto;
+    text-align: center;
 }
 
 .shadow {
@@ -128,9 +128,12 @@ html, body {
     .parent-container {
         display: grid;
         grid-template-columns: 1fr;
-        /*grid-template-rows: repeat(2, 1fr);*/
-        /*grid-column-gap: 0;*/
-        /*grid-row-gap: 1fr;*/
+    }
+
+    #all-movies{
+        position: absolute;
+        top: 600px;
+        right: 0;
     }
 
     /*_______________ Blob _______________*/
@@ -187,18 +190,25 @@ html, body {
 
     .navbar-toggle {
         position: absolute;
-        top: 10px;
+        top: 20px;
         right: 20px;
         cursor: pointer;
         color: var(--baby-powder-color);
         font-size: 24px;
     }
     .main-nav {
-         list-style-type: none;
-         display: none;
+        display: none;
      }
-    .active {
-        display: block;
+
+    #js-menu {
+        padding-bottom: 20px;
+        width: 100%;
+        border-radius: 0 0 2em 2em;
+        justify-content: space-evenly;
+        display: flex;
+        position: absolute;
+        top: 124px;
+        background-color: var(--baby-powder-color);
     }
 
 
@@ -284,6 +294,27 @@ html, body {
 
 @media screen and (min-width: 576px) {
 
+    #all-movies{
+        margin-top: 15px;
+    }
+
+    #js-navbar-toggle{
+        font-size: 2em;
+    }
+
+    #js-menu {
+        padding-bottom: 20px;
+        width: 100%;
+        border-radius: 0 0 2em 2em;
+        justify-content: space-evenly;
+        display: flex;
+        position: absolute;
+        top: 0px;
+        margin-bottom: 15px;
+        background-color: var(--baby-powder-color);
+        color: var(--dark-gunmetal-color);
+    }
+
     .navbar {
         display: flex;
         justify-content: space-between;
@@ -307,7 +338,9 @@ html, body {
         margin-top: 0;
     }
     .navbar-toggle {
-        display: none;
+        position: absolute;
+        top: -380px;
+        right: 20px;
     }
     .logo:hover,
     .nav-links:hover {
@@ -420,6 +453,7 @@ html, body {
     .card-rating, .card-plot {
         display: none;
     }
+
     .mobile-card-title{
         display: none;
     }

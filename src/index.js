@@ -132,6 +132,10 @@ $(document).ready(function() {
 
     $('#edit-movie-title').val(""); // clear the movie title input value
     $('#edit-movie-rating').val(""); // clear the movie rating inout value
+    $('#edit-movie-rating').val(""); // clear the movie rating inout value
+
+    $("#edit-movie-id, #editBtn").show().val(""); // show the edit movie hide input and edit button
+    $('#edit-movie-title, #edit-movie-rating, #submitEditBtn').hide(); // Hide the edit movie inputs and final submit edit button
 
   });
 
@@ -224,11 +228,14 @@ function getRandomValue() {
 // });
 
 
-$("#js-navbar-toggle").addEventListener('click', function (e) {
+// ADD NAVBAR TOGGLE MENU ON MOBILE
+
+$('#js-menu').hide();
+
+$("#js-navbar-toggle").click(function (e) {
 
   e.preventDefault();
-
-  $('#js-menu').toggle('active');
-  // $('#js-menu').slideToggle();
+  $('#js-menu').slideToggle();
+  $('#add-movies').addClass()
 
 });
