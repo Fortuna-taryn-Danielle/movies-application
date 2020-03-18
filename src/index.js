@@ -22,9 +22,10 @@ $(document).ready(function() {
 
       $('#all-movies').append(`
     <div class="card item">
-          <h3 class="card-title">${title}</h3>
+          <h3 class="desktop-card-title">${title}</h3>
         <img class="card-img" src="${posterUrl}">
         <div class="card-body">
+          <h3 class="mobile-card-title">${title}</h3>
           <div class="card-rating">${getStars(rating)}</div>
           <div class="card-director">${director}</div>
           <div class="card-actors">${actors}</div>
@@ -34,7 +35,6 @@ $(document).ready(function() {
             <i class="fas fa-trash-alt delete-btn" data-id="${id}"></i>
         </div>
     </div>`); // put the id, title, and rating into the html
-    // <button class="delete-btn" data-id="${id}">Delete</button>
 
     });
 
@@ -222,3 +222,13 @@ function getRandomValue() {
 //     // when: (pageIndex) => pageIndex % 2 !== 0,
 //   }
 // });
+
+
+$("#js-navbar-toggle").addEventListener('click', function (e) {
+
+  e.preventDefault();
+
+  $('#js-menu').toggle('active');
+  // $('#js-menu').slideToggle();
+
+});

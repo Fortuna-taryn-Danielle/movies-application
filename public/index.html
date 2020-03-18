@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="./style.css" />
 
     <!---------------- GOOGLE FONTS ----------------->
-    <link href="https://fonts.googleapis.com/css?family=Dosis|Roboto&display=swap" rel="stylesheet">
+<!--    <link href="https://fonts.googleapis.com/css?family=Dosis|Roboto&display=swap" rel="stylesheet">-->
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Roboto+Condensed|Saira+Extra+Condensed&display=swap" rel="stylesheet">
 
     <!---------------- FONT AWESOME ----------------->
     <script src="https://kit.fontawesome.com/bed02793ca.js" crossorigin="anonymous"></script>
@@ -30,57 +31,80 @@
             <h1 class="main-header" id="headerTitle">Allegory</h1>
         </header>
 
+
+        <!---------------- NAV MENU ----------------->
+        <nav class="aside-container navbar">
+
+            <!---------------- NAV TOGGLE ----------------->
+            <span class="navbar-toggle" id="js-navbar-toggle">
+                <i class="fas fa-bars"></i>
+            </span>
+
+            <!---------------- COLLAPSED NAVBAR ----------------->
+            <div class="main-nav" id="js-menu">
+
+                <!---------------- ADD FORM ----------------->
+                <section id="add-movie-section">
+
+                    <h1>Add a Movie</h1>
+                    <form id="add-movie-form">
+                        <label for="new-movie-title">Title: </label>
+                        <input type="text" id="new-movie-title" placeholder="Movie title">
+
+                        <br><br>
+                        <h3>Rating: </h3>
+                        <input type="radio" name="rating" value="1" id="1str"><label for="1str">1 star</label><br>
+                        <input type="radio" name="rating" value="2" id="2str"><label for="2str">2 stars</label><br>
+                        <input type="radio" name="rating" value="3" id="3str"><label for="3str">3 stars</label><br>
+                        <input type="radio" name="rating" value="4" id="4str"><label for="4str">4 stars</label><br>
+                        <input type="radio" name="rating" value="5" id="5str"><label for="5str">5 stars</label>
+
+                        <br><br>
+                        <button id="submitBtn" type="submit">Add movie</button>
+
+                    </form>
+                </section>
+
+                <!---------------- EDIT FORM ----------------->
+                <section id="edit-movie-section">
+
+                    <h1>Edit Movie</h1>
+
+                    <form id="edit-movie-form">
+
+                        <label for="edit-movie-id"></label>
+                        <input type="text" id="edit-movie-id" placeholder="Movie Id">
+                        <br><br>
+                        <button id="editBtn" type="submit">Edit movie</button>
+
+                        <input type="text" id="edit-movie-title" placeholder="Movie title">
+                        <input type="text" id="edit-movie-rating" placeholder="Movie rating">
+                        <button id="submitEditBtn" type="submit">Edit movie</button>
+
+                    </form>
+
+                </section>
+
+            </div>
+
+        </nav>
+
         <!---------------- MOVIE CARDS ----------------->
         <main id="easyPaginate">
             <div id="all-movies" class="card-container container">
                 <img class="loadingIcon shadow" src="assets/animations/Ellipsis-1s-200px.svg">
+                <!-- The expanding grid (hidden by default) -->
+                <div id="b1" class="containerTab" style="display:none;background:green">
+                    <!-- If you want the ability to close the container, add a close button -->
+                    <span onclick="this.parentElement.style.display='none'" class="closebtn">x</span>
+                    <h2>Box 1</h2>
+                    <p>Lorem ipsum..</p>
+                </div>
             </div>
         </main>
 
 <!--        <button id="trigger1" class="trigger">Load more</button>-->
 
-
-        <!---------------- ASIDE FORMS ----------------->
-        <aside class="aside-container">
-
-            <!---------------- ADD FORM ----------------->
-            <section id="add-movie-section">
-                <h1>Add a Movie</h1>
-                <form id="add-movie-form">
-                    <label for="new-movie-title">Title: </label>
-                    <input type="text" id="new-movie-title" placeholder="Movie title">
-
-                    <br><br>
-                    <h3>Rating: </h3>
-                    <input type="radio" name="rating" value="1" id="1str"><label for="1str">1 star</label><br>
-                    <input type="radio" name="rating" value="2" id="2str"><label for="2str">2 stars</label><br>
-                    <input type="radio" name="rating" value="3" id="3str"><label for="3str">3 stars</label><br>
-                    <input type="radio" name="rating" value="4" id="4str"><label for="4str">4 stars</label><br>
-                    <input type="radio" name="rating" value="5" id="5str"><label for="5str">5 stars</label>
-
-                    <br><br>
-                    <button id="submitBtn" type="submit">Add movie</button>
-
-                </form>
-            </section>
-
-            <!---------------- EDIT FORM ----------------->
-            <section id="edit-movie-section">
-                <h1>Edit Movie</h1>
-                <form id="edit-movie-form">
-                    <label for="edit-movie-id"></label>
-                    <input type="text" id="edit-movie-id" placeholder="Movie Id">
-                    <br><br>
-                    <button id="editBtn" type="submit">Edit movie</button>
-                    <br><br>
-
-                    <input type="text" id="edit-movie-title" placeholder="Movie title">
-                    <input type="text" id="edit-movie-rating" placeholder="Movie rating">
-                    <br><br>
-                    <button id="submitEditBtn" type="submit">Edit movie</button>
-                </form>
-            </section>
-        </aside>
     </div>
 
     <!---------------- BUNDLED JS ----------------->
